@@ -14,7 +14,7 @@ inquirer
   },
   {
     type: "input",
-    message: "What colour would you like your font?",
+    message: "What colour would you like your font (Hexidecimal colours are accepted)?",
     name: "textColour",
   },
   {
@@ -25,11 +25,11 @@ inquirer
   },
   {
     type: "input",
-    message: "What colour would you like your shape to be?",
+    message: "What colour would you like your shape to be (Hexidecimal colours are accepted)?",
     name: "shapeColour",
   },
 ])
-//then the users answers will be saved using the SVG logo constructor
+// this takes the users data and sends it to the generateLogo function
 .then((response) => {generateLogo(response)
   })
 .catch((error) => {
