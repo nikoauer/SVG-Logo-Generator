@@ -1,7 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const SVGLogo = require("./library/shapes");
+const generateLogo = require("./library/generateLogo")
 
+// the init function starts the program and prompts user with these 4 questions 
 function init (){
 inquirer
   .prompt([
@@ -27,14 +29,15 @@ inquirer
     name: "shapeColour",
   },
 ])
+//then the users answers will be saved using the SVG logo constructor
 .then((answers) => {
-  let SVGproperties = new SVGLogo (
+  let svgPproperties = new SVGLogo (
     answers.title,
     answers.textColour,
     answers.shape,
     answers.shapeColour
     ) 
-      generateLogo(SVGproperties)
+      generateLogo(svgProperties)
   })
 .catch((error) => {
       console.error("Error Occured:", error);
@@ -43,6 +46,3 @@ inquirer
 
 init();
 
-function generateLogo(SVGproperties) {
- return console.log(SVGproperties.shape)
-}
