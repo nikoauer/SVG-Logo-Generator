@@ -1,3 +1,4 @@
+// this constructor organises the information from the users input through inquirer 
 class SVGLogo {
   constructor(title, textColour, shape, shapeColour) {
     this.title = title;
@@ -6,9 +7,11 @@ class SVGLogo {
     this.shapeColour = shapeColour;
   }
 
+//   this render function marksup the svg file relative to the users input 
   render = () => {
       let svgMarkup = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">`;
 
+    // the if conditional check as to what shape the user has chosen and thus uses the correct SVG parameters for that shape 
     if (this.shape === "Circle"){
         svgMarkup += `<circle cx="50" cy="50" r="45" fill="${this.shapeColour}" />`;
     }
@@ -25,8 +28,6 @@ class SVGLogo {
 
     // closing svg statement
     svgMarkup += "</svg>";
-
-    console.log(svgMarkup)
 
     return svgMarkup;
   };

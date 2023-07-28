@@ -5,6 +5,7 @@ const path = require("path")
 //then the users answers will be saved using the SVG logo constructor
 function generateLogo(data){
 
+    // this creates a new constructor object
     let newLogo = new SVGLogo (
         data.title,
         data.textColour,
@@ -12,9 +13,11 @@ function generateLogo(data){
         data.shapeColour
         )
     
+    // this joins the path of the SVG logo file to the output folder
         const folderPath = "./output";
         const fileName = "logo.svg";
         const filePath = path.join(folderPath, fileName);
+
     //this writes the svg file and notifies the users it has been generated
     fs.writeFile(filePath, newLogo.render(), (err) => {
         if (err){
