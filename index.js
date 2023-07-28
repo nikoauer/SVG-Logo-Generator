@@ -11,6 +11,7 @@ inquirer
     type: "input",
     message: "What letters do you want to be used for your logo (maximum of 3 characters)?",
     name: "title",
+    validate: title => title.length <= 3 || "Letters need to be 3 or less!"
   },
   {
     type: "input",
