@@ -20,4 +20,4 @@ In order to run this program you require:
 
 In order to run this program, clone this repository and open it in a code editor. Open a integrated terminal and proceed to npm install inquirer (npm i inquirer) and jest (npm i jest) if are already installed. Now in the CLI type "node index.js", 4 questions will then prompt the user for the 3 characters they want in their logo, their colour, the shape and the shape colour. Once answered it will then notify the user that a logo has been geneterated and should be accessable in the output folder.
 
-Here is a link to a video for further in depth instructions: 
+Here is a link to a video for further in depth instructions: https://youtu.be/hx3tXfFokd8
